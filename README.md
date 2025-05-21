@@ -2,7 +2,7 @@
 
 ## Get to know us 
 
-As passionate web developer I love to combine fun with learning through interactive, user-driven experiences. This project showcases how data doesn’t have to be static — it can be explored, played with, and discovered.
+As a passionate web developer I love to combine fun with learning through interactive, user-driven experiences. This project showcases how data doesn’t have to be static — it can be explored, played with, and discovered.
 
 My aim is to create a site that’s engaging for users of all ages, while also presenting meaningful information about the natural world. Whether you're here to test your skills, learn about wildlife, or just enjoy a beautifully crafted hidden objects safari game, I hope this experience brings you something new.
 
@@ -45,7 +45,7 @@ JQuery
 
 ## GitHub User Story Project
 
-A [project](https://github.com/users/IrinaAdeniyi/projects/5/views/1) containing user stories with acceptance criteria and tasks was created in GitHub. This was done to easily organize and prioritize work, as well as defining clear requirements and tracking progress.
+A [project](https://github.com/users/IrinaAdeniyi/projects/5/views/1) containing user stories with acceptance criteria was created in GitHub. This was done to easily organize and prioritize work, as well as defining clear requirements and tracking progress.
 
 ## Wireframes
 
