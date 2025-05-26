@@ -61,3 +61,32 @@ The wireframes for this website were created using [Balsamiq](https://balsamiq.c
 
 ### Laptop view
 ![Game laptop view](assets/wireframes/WildFind_browser.png)
+
+## Building process
+
+
+## Project Structure
+
+## Features
+
+## Possible future features
+
+## Testing
+
+## Troubleshooting
+
+## Remaining bugs
+
+## Website checks using validation tools
+
+### Lighthouse scores
+
+**Both the W3C Markup Validator and W3C CSS validator returned no errors.**
+
+## Deployment
+
+## Setup Instructions
+
+## Credits
+
+

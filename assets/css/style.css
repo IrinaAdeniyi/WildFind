@@ -1,0 +1,9 @@
+/* Hero section */
+.hero {
+    background: url('../images/safari-bkg-1.jpg') no-repeat center center/cover;
+    /* min-height: 80vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
