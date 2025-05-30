@@ -64,6 +64,11 @@ The wireframes for this website were created using [Balsamiq](https://balsamiq.c
 
 ## Building process
 
+I started building my project by creating the structure tree. I then concentrated on the game-area images, which represent the background of the game. I chose to have two themes and challenges. The first theme is **The Big Five** - featuring the African Elephant, African Lion, African Leopard, African Buffalo and the Black Rhinoceros. These animals are five of the most iconic and sought-after animals to see on an African safari. The second theme is **Rainforest Creatures** - featuring the Tree Frog, Blue Morpho Butterfly, Boa Constrictor, Orchid and the Capuchin Monkey. These animals are ideal for learning about tropical ecosystems.
+
+I then proceeded to hide the animals in the two backgrounds.
+
+
 
 ## Project Structure
 

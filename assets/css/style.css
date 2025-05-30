@@ -1,11 +1,11 @@
 /* Hero section */
-.hero {
+.game-area {
     background: url('../images/rainforest-bkg-2.jpg') no-repeat center center/cover;
     min-height: 140vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding-top: 50px; */
+    position: relative;
 }
 
 .custom-heading {
@@ -13,14 +13,18 @@
     top: 20px;
     right: 40px;
     margin: 0;
-    /* color: #ffffff;  */
     z-index: 10;  /* keep text above background */
+    display: flex;
+    align-items: center;
 }
 
 .icon {
-    position: absolute;
-    top: 15px;
-    right: 230px;
     max-height: 4vh;
+    margin-right: 10px;
+}
 
+.hidden-object {
+    position: absolute;
+    width: 60px;
+    cursor: pointer;
 }

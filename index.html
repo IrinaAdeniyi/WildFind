@@ -16,7 +16,13 @@
     <title>WildFind - Hidden Objects Game</title>
 
     <!-- CSS link -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- jQuery link to be loaded before JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JavaScript link -->
+    <script src="assets/js/script.js"></script>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
@@ -38,13 +44,16 @@
     <!-- Main -->
     <main>
         <!-- Hero section -->
-        <section class="hero d-flex flex-column">
+        <section class="game-area d-flex flex-column">
             <div class="container">
-                <h1 class="display-4 fw-bold custom-heading">
-                <img src="/assets/images/lion.jpeg" alt="cute lion" class="icon">
-                WildFind
+                <h1 class="display-4 custom-heading fw-bold">
+                    <img src="assets/images/lion.jpeg" alt="cute lion" class="icon">
+                    WildFind
                 </h1>
                 
+                <!-- Hidden objects -->
+                <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="butterfly" style="top: 20%; left: 59%;">
+
                 
             </div>
         </section>
