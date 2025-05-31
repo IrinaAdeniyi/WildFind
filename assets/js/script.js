@@ -12,8 +12,8 @@ $(document).ready(function() {
 // Cross the name of the animal/plant found
 $(document).ready(function(){
     $('#butterfly').on('click', function () {
-        // $(this).hide();
-        $('#butterfly-check').css('text-decoration', 'line-through');
+        $(this).hide();
+        $('#butterfly-check .cross-text').css('text-decoration', 'line-through');
     })
 });
 

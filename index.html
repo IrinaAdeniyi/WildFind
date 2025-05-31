@@ -47,11 +47,15 @@
         <section class="game-area d-flex flex-column">
             <div class="container">
                 <h1 class="display-4 custom-heading fw-bold">
-                    <img src="assets/images/lion.jpeg" alt="cute lion" class="icon">
+                    <img src="assets/images/lion.jpeg" alt="cute lion" class="logo">
                     WildFind
                 </h1>
                 
                 <!-- Hidden objects -->
+                <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="butterfly" style="top: 20%; left: 59%;">
+                <img src="assets/images/yellow-tree-frog.png" class="hidden-object" id="frog" style="bottom: 20%; left: 59%;">
+                <img src="assets/images/boa-constrictor.png" class="hidden-object" id="snake" style="top: 20%; left: 3%;">
+                <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="orchid" style="top: 20%; left: 59%;">
                 <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="butterfly" style="top: 20%; left: 59%;">
 
             </div>
@@ -59,12 +63,33 @@
             <footer class="checklist-footer text-white text-center py-3">
                 <div id="checklist">
                     <h3>Find These Creatures:</h3>
+
                     <ul>
+
                     <li id="butterfly-check">
                         <img src="assets/images/blue-morpho-butterfly.svg" alt="butterfly icon" class="icon">
-                        Blue Morpho Butterfly
+                        <span class="cross-text">Blue Morpho Butterfly</span>
                     </li>
-                    <li id="frog-check">Tree Frog</li>
+
+                    <li id="frog-check">
+                        <img src="assets/images/tree-frog.svg" alt="frog icon" class="icon">
+                        <span class="cross-text">Yellow Tree Frog</span>
+                    </li>
+
+                    <li id="snake-check">
+                        <img src="assets/images/boa-constrictor.svg" alt="snake icon" class="icon">
+                        <span class="cross-text">Boa Constrictor</span>
+                    </li>
+
+                    <li id="orchid-check">
+                        <img src="assets/images/orchid.svg" alt="frog icon" class="icon">
+                        <span class="cross-text">Orchid</span>
+                    </li>
+
+                    <li id="monkey-check">
+                        <img src="assets/images/capuchin-monkey.svg" alt="frog icon" class="icon">
+                        <span class="cross-text">Capuchin Monkey</span>
+                    </li>
                     
                     </ul>
                 </div>
