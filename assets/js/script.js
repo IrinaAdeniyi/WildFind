@@ -15,5 +15,25 @@ $(document).ready(function(){
         $(this).hide();
         $('#butterfly-check .cross-text').css('text-decoration', 'line-through');
     })
+
+    $('#frog').on('click', function () {
+        $(this).hide();
+        $('#frog-check .cross-text').css('text-decoration', 'line-through');
+    })
+
+    $('#snake').on('click', function () {
+        $(this).hide();
+        $('#snake-check .cross-text').css('text-decoration', 'line-through');
+    })
+
+    $('#orchid').on('click', function () {
+        $(this).hide();
+        $('#orchid-check .cross-text').css('text-decoration', 'line-through');
+    })
+
+    $('#monkey').on('click', function () {
+        $(this).hide();
+        $('#monkey-check .cross-text').css('text-decoration', 'line-through');
+    })
 });
 
