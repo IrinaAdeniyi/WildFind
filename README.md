@@ -102,4 +102,6 @@ I continued by adding all the hidden animals/plants to the Rainforest challenge.
 
 ## Credits
 
+1. [rawpixel](https://www.rawpixel.com/)
+
 
