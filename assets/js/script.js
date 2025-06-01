@@ -48,7 +48,7 @@ const hiddenObjects = {
 /** Hide the object once it is clicked, 
  * cross the matching name in the footer checklist
  * show the modal pop-up with the info about the object */
-document.addEventListener('DOMContentLoade', function(){
+document.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll('.hidden-object').forEach(obj => {
         obj.addEventListener('click', function(){
         
@@ -75,7 +75,16 @@ document.addEventListener('DOMContentLoade', function(){
     });
 });
 
-// document.querySelector('.close-btn').addEventListener('click', function () {
-//     document.getElementById('infoModal').style.display = 'none';
-// });
+//Close pop-up when x is clicked
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector('.close-btn').addEventListener('click', function () {
+        document.getElementById('infoModal').style.display = 'none';
+    });
 
+// Close pop-up when the background is clicked
+    document.getElementById('infoModal').addEventListener('click', function (e) {
+        if (e.target.id === 'infoModal') {
+            this.style.display = 'none';
+        }
+    });
+});
