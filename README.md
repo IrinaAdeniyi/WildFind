@@ -86,6 +86,8 @@ I continued by adding all the hidden animals/plants to the Rainforest challenge.
 
 3. I initially used jQuery to make a pop-up appear when the objexct was found. I then realised that the project requries JavaScript and I decided to change the code to JavaScript. After researching I realised that the alert() function was not a good idea, because it has limited functionality. Therefore, I proceeded to use a modal.
 
+4. Initially, when I declared the hiddenObjects object inside the DOMContentLoaded event listener, so it wasn't accessible outside that function for the click handlers to use it - it was not lighting up in the js file and a message was saying that it wasn't used. As a result the pop-up didn't work. The solution was to put the object outside of the DOMContentLoaded callback, to be accesible everywhere.
+
 
 
 ## Remaining bugs
