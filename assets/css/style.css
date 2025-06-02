@@ -49,6 +49,24 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* Counter styling */
+#found-counter {
+    font-family: var(--primary-font);
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #7EA777;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 20;
+    color: #000000;
+}
+
 /* Logo styling */
 .logo {
     max-height: 6vh;
@@ -113,22 +131,6 @@ main {
     width: 100%;
     z-index: 999; 
     color: #000000;
-}
-
-#found-counter {
-    font-family: var(--primary-font);
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid #7EA777;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    z-index: 20;
 }
 
 .checklist-footer h3 {
