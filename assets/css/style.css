@@ -28,12 +28,17 @@ main {
 
 /* Hero section */
 .game-area {
-    background: url('../images/rainforest-bkg-2.jpg') no-repeat center center/cover;
-    min-height: 100vh;                
+    background: url('../images/rainforest-bkg-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: calc(100vh - 130px);     
     width: 100%;
     position: relative;
     overflow: hidden;
-    padding-bottom: 140px;
+    /* padding-bottom: 140px; */
+    background-attachment: scroll;
+    overflow: hidden;
 }
 
 /* h1 styling */
@@ -54,7 +59,7 @@ main {
     font-family: var(--primary-font);
     position: absolute;
     top: 20px;
-    left: 80px;
+    left: 110px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid #7EA777;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -164,9 +169,25 @@ main {
 
 /* Media queries */
 
+/* Small phones */
+@media (max-width: 480px) { 
+
+}
+
+/* Phones & small devices */
 @media (max-width: 768px) {
     .game-area {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
     
+}
+
+/* Tablets */
+@media (max-width: 992px) { 
+
+}
+
+/* Laptops/desktops */
+@media (max-width: 1200px) {  
+
 }
