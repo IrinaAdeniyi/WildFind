@@ -70,7 +70,7 @@ I then proceeded to hide the animals in the two backgrounds. I started with the 
 
 I continued by adding all the hidden animals/plants to the Rainforest challenge. Once the hidden objects were in and the basic functionality of the game was working (finding object, clicking object, pop-up, object disappears and the word is crossed), I wanted to make the pop-up more interesting by adding a picture of the object, as well as some information. After researching I discovered that the alert() function, which I initially used for the pop-up, has limited functionality and I discovered a modal was more adequate for my needs. Moreover, I realised that I only used jQuery in my project and I needed to use JavaScript as well. Therefore, I proceeded to implement the above changes by using a modal (https://www.w3schools.com/howto/howto_css_modals.asp).
 
-I first added the modal in the HTML file and I then styled it in the css file using mostly info from the above link from W3Schools. I then proceeded to write the JavaScript object, containing the animals/plants with their properties. 
+I first added the modal in the HTML file and I then styled it in the css file using mostly info from the above link from W3Schools. I then proceeded to write the JavaScript array, containing the animals/plants with their properties. 
 
 ## Project Structure
 
@@ -85,9 +85,9 @@ I first added the modal in the HTML file and I then styled it in the css file us
 
 2. The second issue I encounter, is again the crossing of the word once the hidden object is found. step one worked initially because I didn't have an icon next to the word. After adding the icons I noticed the crossing was not working anymore. Therefore, I assumed it will be the img tag that interferes with the crossing and I enclosed the text in a span tag. This helped resolve the issue.
 
-3. I initially used jQuery to make a pop-up appear when the objexct was found. I then realised that the project requries JavaScript and I decided to change the code to JavaScript. After researching I realised that the alert() function was not a good idea, because it has limited functionality. Therefore, I proceeded to use a modal.
+3. I initially used jQuery to make a pop-up appear when the object was found. I then realised that the project requries JavaScript and I decided to change the code to JavaScript. After researching I realised that the alert() function was not a good idea, because it has limited functionality. Therefore, I proceeded to use a modal.
 
-4. Initially, when I declared the hiddenObjects object inside the DOMContentLoaded event listener, so it wasn't accessible outside that function for the click handlers to use it - it was not lighting up in the js file and a message was saying that it wasn't used. As a result the pop-up didn't work. The solution was to put the object outside of the DOMContentLoaded callback, to be accesible everywhere.
+4. Initially, I declared the hiddenObjects array inside the DOMContentLoaded event listener, so it wasn't accessible outside that function for the click handlers to use it - it was not lighting up in the js file and a message was saying that it wasn't used. As a result the pop-up didn't work. The solution was to move the array outside of the DOMContentLoaded callback, to be accesible everywhere.
 
 5. After I created the pop-up and added all the necessary details, when I tested it was still not working. After several attempts to find the issue, I realised it was a typo: I wrote DOMContentLoade instead of DOMContentLoaded.
 

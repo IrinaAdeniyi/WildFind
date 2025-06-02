@@ -43,11 +43,16 @@
     <main>
         <!-- Hero section -->
         <section class="game-area d-flex flex-column">
+
             <div class="container-fluid px-0">
+                <!-- Logo and name -->
                 <h1 class="display-4 custom-heading fw-bold">
-                    <img src="assets/images/jeep.png" alt="cute lion" class="logo" style="height: auto;">
+                    <img src="assets/images/jeep.png" alt="safari jeep" class="logo">
                     WildFind
                 </h1>
+
+                <!-- Counter for found objects -->
+                <div id="found-counter">Objects found: 0 / 5</div>
                 
                 <!-- Hidden objects -->
                 <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="butterfly" style="top: 20%; left: 59%;">
@@ -55,7 +60,6 @@
                 <img src="assets/images/boa-constrictor.png" class="hidden-object" id="snake" style="top: 52%; left: 25%;">
                 <img src="assets/images/orchid.png" class="hidden-object" id="orchid" style="top: 20%; left: 3%;">
                 <img src="assets/images/capuchin-monkey.png" class="hidden-object" id="monkey" style="top: 41%; left: 59%;">
-
             </div>
 
             <!-- The modal -->
@@ -71,12 +75,10 @@
                 </div>
             </div>
 
-            <footer class="checklist-footer text-white text-center py-3">
+            <footer class="checklist-footer text-center py-3">
                 <div id="checklist">
                     <h3>Find These Creatures:</h3>
-
                     <ul>
-
                     <li id="butterfly-check">
                         <img src="assets/images/blue-morpho-butterfly.svg" alt="butterfly icon" class="icon">
                         <span class="cross-text">Blue Morpho Butterfly</span>
@@ -101,10 +103,10 @@
                         <img src="assets/images/capuchin-monkey.svg" alt="frog icon" class="icon">
                         <span class="cross-text">Capuchin Monkey</span>
                     </li>
-                    
                     </ul>
                 </div>
             </footer>
+
         </section>
     </main>
 </body>
