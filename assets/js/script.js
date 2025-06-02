@@ -45,15 +45,44 @@ const hiddenObjects = {
     }
 };
 
+// Funtion to update the counter
+function updateCounter(){
+    let foundCount = 0;
+    const allObjects = document.querySelectorAll('.hidden-object');
+
+    for(const object of allObjects){
+        if (object.style.display === 'none') {
+            foundCount++;
+        }
+    }
+
+    const totalItems = Object.keys(hiddenObjects).length;
+
+    document.getElementById('found-counter').textContent = `Found: ${foundCount} / ${totalItems}`;
+
+    // Alert when all items are found
+    if (foundCount === totalItems) {
+        alert("Congratulations! You found all the hidden animals and plants!");
+    }
+
+}
+
 /** Hide the object once it is clicked, 
  * cross the matching name in the footer checklist
- * show the modal pop-up with the info about the object */
+ * show the modal pop-up with the info about the object
+ * update counter */
 document.addEventListener('DOMContentLoaded', function(){
+
+    let foundCount = 0;
+    const totalItems = Object.keys(hiddenObjects).length;
+
     document.querySelectorAll('.hidden-object').forEach(obj => {
         obj.addEventListener('click', function(){
         
-            this.style.display = 'none'; //hide the clicked object
+            // Hide the clicked object
+            this.style.display = 'none'; 
 
+            // Cross off the word matching the found object
             const id = this.id;
 
             const checkText = document.querySelector(`#${id}-check .cross-text`);
@@ -61,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 checkText.style.textDecoration = 'line-through';
             };
         
+            // Show the pop-up (modal info)
             const item = hiddenObjects[id];
             if (item) {
                 document.getElementById('modal-image').src = item.image;
@@ -71,6 +101,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 document.getElementById('modal-defense-trick').textContent = item.defenseTrick;
                 document.getElementById('infoModal').style.display = 'flex';
             }
+            
+            // Update the counter
+            updateCounter();
         });
     });
 });
@@ -88,3 +121,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 });
+
+
+
