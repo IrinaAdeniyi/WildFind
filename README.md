@@ -68,9 +68,13 @@ I started building my project by creating the structure tree. I then concentrate
 
 I then proceeded to hide the animals in the two backgrounds. I started with the blue morpho butterfly. I used a "hidden-object" class, and used the pointer value for the cursor attribute in css to change the cursor to a little hand pointing when the user hovers over a hidden object. I used jQuery to make a pop-up appear (alert() funtion) once a hidden object it's clicked and make it disspear after it is clicked.
 
-I continued by adding all the hidden animals/plants to the Rainforest challenge. Once the hidden objects were in and the basic functionality of the game was working (finding object, clicking object, pop-up, object disappears and the word is crossed), I wanted to make the pop-up more interesting by adding a picture of the object, as well as some information. After researching I discovered that the alert() function, which I initially used for the pop-up, has limited functionality and I discovered a modal was more adequate for my needs. Moreover, I realised that I only used jQuery in my project and I needed to use JavaScript as well. Therefore, I proceeded to implement the above changes by using a modal (https://www.w3schools.com/howto/howto_css_modals.asp).
+I continued by adding all the hidden animals/plants to the Rainforest challenge. Once the hidden objects were in and the basic functionality of the game was working (finding object, clicking object, pop-up, object disappears and the word is crossed), I wanted to make the pop-up more interesting by adding a picture of the object, as well as some information. After researching I discovered that the alert() function, which I initially used for the pop-up, has limited functionality and I discovered a modal was more adequate for my needs. Moreover, I realised that I only used jQuery in my project and I needed to use JavaScript as well. Therefore, I proceeded to implement the above changes by using a modal as shown on [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp).
 
-I first added the modal in the HTML file and I then styled it in the css file using mostly info from the above link from W3Schools. I then proceeded to write the JavaScript array, containing the animals/plants with their properties. 
+I first added the modal in the HTML file and I then styled it in the css file using mostly info from the above link from W3Schools. I then proceeded to write the JavaScript array, containing the animals/plants with their properties. Finally, I wrote the code to hide the object once it is clicked, to cross the matching name in the footer checklist and to show the modal pop-up with the info about the object. Once this was done I proceeded with writing the code for closing the modal. For this I thought two options would work: an x in the top right corner and clicking the background.
+
+I then worked on the accesibility of the page, such as the text readability using the [ACCESSIBLEWEB checker](https://accessibleweb.com/color-contrast-checker/). 
+
+At this point, I needed to add a counter for the found items, which I did and I corrected the background photo to make sure it doesn't scroll. 
 
 ## Project Structure
 
@@ -92,6 +96,10 @@ I first added the modal in the HTML file and I then styled it in the css file us
 5. After I created the pop-up and added all the necessary details, when I tested it was still not working. After several attempts to find the issue, I realised it was a typo: I wrote DOMContentLoade instead of DOMContentLoaded.
 
 6. I then found an issue with the closing of the pop-up, which didn't work. After checking the console, I noticed I was getting an error (document.querySelector('.close-btn').addEventListener('click', function () {document.getElementById('infoModal').style.display = 'none';});). After investigating, the issue was resolved by putting the code inside the DOMContentLoaded event listener.
+
+7. I used the [ACCESIBLEWEB](https://accessibleweb.com/color-contrast-checker/) to check the readability of the footer, as it seemed problematic. This was confirmed and I then changed the footer background color and the text color to ensure readability.
+
+8. The background picture was not fitting inside of the screen and scrolling was needed. This, in my opinion, was not suitable for a game, therefore, I looked up solutions and I tried a couple options such as background-size: contain [stackoverflow](https://stackoverflow.com/questions/33578169/css-make-image-fit-screen-so-no-scroll-bars-appear), but this didn't work. Finally, I discovered the calc() function in CSS ([W3Schools](https://www.w3schools.com/cssref/func_calc.php)), which worked. Initially, this seemed to not do anything, however, after researching I discovered that the *-* needs space before and after ([stackoverflow](https://stackoverflow.com/questions/30678942/does-calc-work-for-background-size-of-image-in-css)). 
 
 
 
