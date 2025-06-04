@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const foundCount = parseInt(modal.dataset.foundcount || "0");
         if (foundCount === totalItems) {
             setTimeout(() => {
-                alert("🎉 Congratulations! You found all the hidden animals and plants!");
-            }, 300); // slight delay for smoothness
+                document.getElementById('congratsModal').style.display = 'flex';
+            }, 200);            
         }
     });
 
@@ -130,9 +130,14 @@ document.addEventListener('DOMContentLoaded', function(){
     const foundCount = parseInt(modal.dataset.foundcount || "0");
     if (foundCount === totalItems) {
         setTimeout(() => {
-            alert("🎉 Congratulations! You found all the hidden animals and plants!");
-        }, 300); // slight delay for smoothness
+            document.getElementById('congratsModal').style.display = 'flex';
+        }, 200);        
     }
+    });
+
+    // Close congratulations modal
+    document.querySelector('.congrats-close-btn').addEventListener('click', function () {
+    document.getElementById('congratsModal').style.display = 'none';
     });
 });
 

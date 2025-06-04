@@ -87,21 +87,20 @@ main {
 }
 
 /* Hidden object facts pop-up modal styling */
-.modal {
+#infoModal {
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    /* overflow: auto; */
     background-color: rgba(0,0,0,0.8);
     display: none;
     align-items: center;
     justify-content: center;
 }
 
-.modal-content {
+#infoModal .modal-content {
     background-color: #ffffff;
     padding: 20px;
     width: 90%;
@@ -118,6 +117,39 @@ main {
 }
 
 .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Congratulations pop-up modal styling */
+/* Congrats Modal Style */
+#congratsModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#congratsModal .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#congratsModal .congrats-close-btn {
     position: absolute;
     top: 10px;
     right: 20px;
