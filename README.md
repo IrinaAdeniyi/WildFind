@@ -76,6 +76,8 @@ I then worked on the accesibility of the page, such as the text readability usin
 
 At this point, I needed to add a counter for the found items, which I did and I corrected the background photo to make sure it doesn't scroll. 
 
+Further, I added a pop up message as well for when all the hidden objects are found.
+
 ## Project Structure
 
 ## Features
@@ -101,6 +103,8 @@ At this point, I needed to add a counter for the found items, which I did and I 
 
 8. The background picture was not fitting inside of the screen and scrolling was needed. This, in my opinion, was not suitable for a game, therefore, I looked up solutions and I tried a couple options such as background-size: contain [stackoverflow](https://stackoverflow.com/questions/33578169/css-make-image-fit-screen-so-no-scroll-bars-appear), but this didn't work. Finally, I discovered the calc() function in CSS ([W3Schools](https://www.w3schools.com/cssref/func_calc.php)), which worked. Initially, this seemed to not do anything, however, after researching I discovered that the *-* needs space before and after ([stackoverflow](https://stackoverflow.com/questions/30678942/does-calc-work-for-background-size-of-image-in-css)). 
 
+9. I initially wrote a function updateCounter() to update the counter and I was calling this function inside the click event listener. I also put an alert (to show a congratulations message once all the hidden objects are found) inside this function. However, this was creating an unwanted behaviour: the congratulation message was showing before the final hidden object pop-up was showing and before the word was crossed. To resolve this, I've updated the function to just return the count and I changed the click event handler to save the count via the function updateCounter(). Finally, I moved the alert message inside the function for the closing of the pop-up with the hidden object info - button and background.
+
 
 
 ## Remaining bugs
@@ -117,6 +121,7 @@ At this point, I needed to add a counter for the found items, which I did and I 
 
 ## Credits
 
-1. [rawpixel](https://www.rawpixel.com/)
+1. Rainforest challenge background image was downloaded from [here](https://images.app.goo.gl/E2rXu6p7dGurHyfh8)
+2. [rawpixel](https://www.rawpixel.com/)
 
 

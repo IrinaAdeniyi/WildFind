@@ -86,7 +86,7 @@ main {
     height: auto;
 }
 
-/* Modal styling */
+/* Hidden object facts pop-up modal styling */
 .modal {
     position: fixed;
     z-index: 1000;

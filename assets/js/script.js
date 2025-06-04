@@ -58,13 +58,10 @@ function updateCounter(){
 
     const totalItems = Object.keys(hiddenObjects).length;
 
+    // Update the counter element on the page
     document.getElementById('found-counter').textContent = `Found: ${foundCount} / ${totalItems}`;
-
-    // Alert when all items are found
-    if (foundCount === totalItems) {
-        alert("Congratulations! You found all the hidden animals and plants!");
-    }
-
+    
+    return foundCount;
 }
 
 /** Hide the object once it is clicked, 
@@ -74,7 +71,6 @@ function updateCounter(){
 document.addEventListener('DOMContentLoaded', function(){
 
     let foundCount = 0;
-    const totalItems = Object.keys(hiddenObjects).length;
 
     document.querySelectorAll('.hidden-object').forEach(obj => {
         obj.addEventListener('click', function(){
@@ -102,23 +98,41 @@ document.addEventListener('DOMContentLoaded', function(){
                 document.getElementById('infoModal').style.display = 'flex';
             }
             
-            // Update the counter
-            updateCounter();
+            // Update the counter and store it in the modal's dataset
+            const foundCount = updateCounter();
+            document.getElementById('infoModal').dataset.foundcount = foundCount;
         });
     });
 });
 
 //Close pop-up when x is clicked
 document.addEventListener('DOMContentLoaded', function(){
+    const modal = document.getElementById('infoModal');
+    const totalItems = Object.keys(hiddenObjects).length; 
+
     document.querySelector('.close-btn').addEventListener('click', function () {
-        document.getElementById('infoModal').style.display = 'none';
+        modal.style.display = 'none';
+
+        const foundCount = parseInt(modal.dataset.foundcount || "0");
+        if (foundCount === totalItems) {
+            setTimeout(() => {
+                alert("🎉 Congratulations! You found all the hidden animals and plants!");
+            }, 300); // slight delay for smoothness
+        }
     });
 
 // Close pop-up when the background is clicked
-    document.getElementById('infoModal').addEventListener('click', function (e) {
+    modal.addEventListener('click', function (e) {
         if (e.target.id === 'infoModal') {
             this.style.display = 'none';
         }
+    
+    const foundCount = parseInt(modal.dataset.foundcount || "0");
+    if (foundCount === totalItems) {
+        setTimeout(() => {
+            alert("🎉 Congratulations! You found all the hidden animals and plants!");
+        }, 300); // slight delay for smoothness
+    }
     });
 });
 
