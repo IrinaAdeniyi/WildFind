@@ -40,54 +40,52 @@
 </head>
 <body>
     <!-- Main -->
-    <main>
-        <!-- Hero section -->
-        <section class="game-area d-flex flex-column">
+    <main class="game-area">
+        <!-- Logo and name -->
+        <h1 class="custom-heading">WildFind</h1>
 
-            <div class="container-fluid px-0">
-                <!-- Logo and name -->
-                <h1 class="display-4 custom-heading fw-bold">
-                    <img src="assets/images/jeep.png" alt="safari jeep" class="logo">
-                    WildFind
-                </h1>
+        <!-- Counter for found objects -->
+        <div id="found-counter">
+        <!-- Bigger screens -->
+        <span class="full-text">Found: 0 / 5</span>
+        <!-- Mobile view -->
+        <span class="short-text">0 / 5</span>
+        </div> 
 
-                <!-- Counter for found objects -->
-                <div id="found-counter">Objects found: 0 / 5</div>
-                
-                <!-- Hidden objects -->
-                <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="butterfly" style="top: 20%; left: 59%;">
-                <img src="assets/images/yellow-tree-frog.png" class="hidden-object" id="frog" style="top: 75%; left: 59%;">
-                <img src="assets/images/boa-constrictor.png" class="hidden-object" id="snake" style="top: 52%; left: 25%;">
-                <img src="assets/images/orchid.png" class="hidden-object" id="orchid" style="top: 20%; left: 3%;">
-                <img src="assets/images/capuchin-monkey.png" class="hidden-object" id="monkey" style="top: 41%; left: 59%;">
+        <!-- Hidden objects -->
+        <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="butterfly" style="top: 20%; left: 59%;">
+        <img src="assets/images/yellow-tree-frog.png" class="hidden-object" id="frog" style="top: 75%; left: 59%;">
+        <img src="assets/images/boa-constrictor.png" class="hidden-object" id="snake" style="top: 52%; left: 25%;">
+        <img src="assets/images/orchid.png" class="hidden-object" id="orchid" style="top: 20%; left: 3%;">
+        <img src="assets/images/capuchin-monkey.png" class="hidden-object" id="monkey" style="top: 41%; left: 59%;">
+        <!-- </div> -->
+
+        <!-- The modal -->
+        <div id="infoModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img id="modal-image"/>
+                <h2 id="modal-title"></h2>
+                <p><strong>Color:</strong> <span id="modal-color"></span></p>
+                <p><strong>Habitat:</strong> <span id="modal-habitat"></span></p>
+                <p><strong>Fun Fact:</strong> <span id="modal-fun-fact"></span></p>
+                <p><strong>Defense Trick:</strong> <span id="modal-defense-trick"></span></p>
             </div>
+        </div>
 
-            <!-- The modal -->
-            <div id="infoModal" class="modal" style="display:none;">
-                <div class="modal-content">
-                    <span class="close-btn">&times;</span>
-                    <img id="modal-image" src="" alt="Animal" />
-                    <h2 id="modal-title"></h2>
-                    <p><strong>Color:</strong> <span id="modal-color"></span></p>
-                    <p><strong>Habitat:</strong> <span id="modal-habitat"></span></p>
-                    <p><strong>Fun Fact:</strong> <span id="modal-fun-fact"></span></p>
-                    <p><strong>Defense Trick:</strong> <span id="modal-defense-trick"></span></p>
-                </div>
+        <!-- Congratulations message modal -->
+        <div id="congratsModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="congrats-close-btn">&times;</span>
+                <h2>Congratulations</h2>
+                <p>You found all the hidden animals and plants!</p>
             </div>
+        </div>
 
-            <!-- Congratulations message modal -->
-            <div id="congratsModal" class="modal" style="display: none;">
-                <div class="modal-content">
-                    <span class="congrats-close-btn">&times;</span>
-                    <h2>Congratulations</h2>
-                    <p>You found all the hidden animals and plants!</p>
-                </div>
-            </div>
-
-            <footer class="checklist-footer text-center py-3">
-                <div id="checklist">
-                    <h3>Find These Creatures:</h3>
-                    <ul>
+        <footer class="checklist-footer">
+            <div id="checklist">
+                <h3>Find These Creatures:</h3>
+                <ul>
                     <li id="butterfly-check">
                         <img src="assets/images/blue-morpho-butterfly.svg" alt="butterfly icon" class="icon">
                         <span class="cross-text">Blue Morpho Butterfly</span>
@@ -112,11 +110,9 @@
                         <img src="assets/images/capuchin-monkey.svg" alt="frog icon" class="icon">
                         <span class="cross-text">Capuchin Monkey</span>
                     </li>
-                    </ul>
-                </div>
-            </footer>
-
-        </section>
+                </ul>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

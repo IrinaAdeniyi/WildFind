@@ -3,14 +3,18 @@
 
 /* CSS Variables */
 :root {
-    --primary-font: 'Federicka the Great', serif;
+    --primary-font: 'Fredericka the Great', serif;
     --secondary-font: 'Baloo 2', sans-serif;
 }
 
 /* Global Styles */
-html, body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
     height: 100%;
 }
 
@@ -21,24 +25,18 @@ h3 {
     font-family: var(--primary-font);
 }
 
-/* Keep background image above the footer */
-main {
-    padding-bottom: 120px; 
-}
+
 
 /* Hero section */
 .game-area {
-    background: url('../images/rainforest-bkg-2.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-image: url('../images/rainforest-bkg-2.jpg');
     background-size: cover;
-    height: calc(100vh - 130px);     
-    width: 100vw;
+    background-position: center center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-    /* padding-bottom: 140px; */
-    background-attachment: scroll;
-    overflow: hidden;
+    height: calc(100vh - 130px);
+    width: 100vw;
 }
 
 /* h1 styling */
@@ -51,6 +49,8 @@ main {
     display: flex;
     align-items: center;
     color: #000000;
+    font-size: 3.5rem;
+    font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -72,10 +72,9 @@ main {
     color: #000000;
 }
 
-/* Logo styling */
-.logo {
-    max-height: 6vh;
-    margin-right: 12px;
+/* Show full text, hide short */
+#found-counter .short-text {
+    display: none;
 }
 
 /* Hidden objects */
@@ -202,17 +201,84 @@ main {
 /* Media queries */
 
 /* Small phones */
-@media (max-width: 480px) { 
+@media (max-width: 600px) { 
+    .game-area {
+        height: 100vh;
+        min-height: unset;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hidden-object {
+        width: 40px;   
+        max-width: 10vw; 
+        height: auto;
+    }
+
+    .modal {
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    #found-counter {
+        font-size: 1rem;
+        top: 10px;
+        left: 10px;
+        padding: 6px 12px;
+        border-radius: 6px;
+    }
+
+    /* Hide long text */
+    #found-counter .full-text {
+        display: none;
+    }
+
+    /* Show short text */
+    #found-counter .short-text {
+        display: inline;
+    }
+
+    .checklist-footer {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .checklist-footer h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .checklist-footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .checklist-footer li {
+        font-size: 1rem;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .checklist-footer .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
 
 }
 
 /* Phones & small devices */
 @media (max-width: 767px) {
-    .game-area {
-        background-attachment: fixed;
-        background-size: calc(100%-200px) auto; 
-        background-repeat: repeat;
-    }
     
 }
 

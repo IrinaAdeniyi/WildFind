@@ -76,7 +76,8 @@ I then worked on the accesibility of the page, such as the text readability usin
 
 At this point, I needed to add a counter for the found items, which I did and I corrected the background photo to make sure it doesn't scroll. 
 
-Further, I added a pop up message as well for when all the hidden objects are found.
+Further, I added a pop up message as well for when all the hidden objects are found. Finally I changed the alert() function with a modal to present the congratulations message at the end of the game in a better way.
+
 
 ## Project Structure
 
@@ -122,6 +123,7 @@ Further, I added a pop up message as well for when all the hidden objects are fo
 ## Credits
 
 1. Rainforest challenge background image was downloaded from [here](https://images.app.goo.gl/E2rXu6p7dGurHyfh8)
-2. [rawpixel](https://www.rawpixel.com/)
+2. I used [rawpixel](https://www.rawpixel.com/) for svgs and pngs
+
 
 

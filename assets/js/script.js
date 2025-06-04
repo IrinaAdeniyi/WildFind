@@ -141,5 +141,21 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
+// Background picture responsiveness
+function setGameAreaHeight() {
+    const gameArea = document.querySelector('.game-area');
+    const footer = document.querySelector('.checklist-footer');
+    const footerHeight = footer ? footer.offsetHeight : 0;
+
+    // Set game area height to visible viewport height minus footer height
+    gameArea.style.height = `${window.innerHeight - footerHeight}px`;
+
+}
+
+// Run on load and resize
+window.addEventListener('load', setGameAreaHeight);
+window.addEventListener('resize', setGameAreaHeight);
+
+
 
 
