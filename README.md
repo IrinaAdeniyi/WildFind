@@ -187,6 +187,7 @@ I used the following steps to deploy:
 8. Code Institute lessons
 9. [accesibleweb](https://accessibleweb.com/color-contrast-checker/)
 10. [coolors](https://coolors.co/)
+11. [Shrink.media](https://www.shrink.media/upload)
 
 
 
