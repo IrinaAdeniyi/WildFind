@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 //Store object details to use in the modal
 const hiddenObjects = {
     butterfly: {
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
             const checkText = document.querySelector(`#${id}-check .cross-text`);
             if (checkText) {
                 checkText.style.textDecoration = 'line-through';
-            };
+            }
         
             // Show the pop-up (modal info)
             const item = hiddenObjects[id];
@@ -99,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
             
             // Update the counter and store it in the modal's dataset
-            const foundCount = updateCounter();
+            foundCount = updateCounter();
             document.getElementById('infoModal').dataset.foundcount = foundCount;
         });
     });

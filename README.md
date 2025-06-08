@@ -120,6 +120,7 @@ I then concentrated on improving the responsiveness of the game. Once i managed 
 ### Lighthouse scores
 
 **Both the W3C Markup Validator and W3C CSS validator returned no errors.**
+**JavaScript code checked with JSHint to validate syntax and spot potential issues. All cleared.**
 
 ## Deployment
 
