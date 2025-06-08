@@ -53,18 +53,22 @@ h3 {
 #found-counter {
     font-family: var(--primary-font);
     position: absolute;
-    top: 20px;
-    left: 110px;
+    top: 10px;
+    right: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid #7EA777;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 1.2rem;
     font-weight: bold;
     z-index: 20;
     color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
 }
 
 /* Show full text, hide short */
@@ -72,10 +76,23 @@ h3 {
     display: none;
 }
 
+/* Style show/hide button */
+#toggle-checklist {
+    position: static; 
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #7EA777;
+    background-color: #e0f0d9;
+    color: #000;
+    display: none;
+}
+
 /* Hidden objects */
 .hidden-object {
     position: absolute;
-    width: 10%;
+    width: 5%;
     cursor: pointer;
 }
 
@@ -195,21 +212,37 @@ h3 {
 /* Media queries */
 /* Smaller than phone */
 @media (max-width: 339px) { 
-    .checklist-footer
-{
-    min-height: calc(100vh - 194px);
-}
+    .checklist-footer {
+        min-height: calc(100vh - 194px);
+    }
 }
 
 /* Small phones */
-@media (min-width: 340px) { 
+@media (orientation: portrait) and (min-width: 340px) and (max-width: 499px) { 
     .game-area {
         width: 100%;
     }
 
     .hidden-object {
-        width: 4vw;   
+        width: 5vw;   
         position: absolute;
+    }
+
+    /* Move counter in the footer */
+    #found-counter {
+        position: relative;
+        margin: 10px auto 0;
+        display: block;
+        font-size: 1rem;
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        border-radius: 6px;
+    }
+
+    /* Move it inside the placeholder using JS */
+    .footer-counter-placeholder {
+        display: block;
     }
 
     .modal {
@@ -225,14 +258,6 @@ h3 {
         margin: 10px;
     }
 
-    #found-counter {
-        font-size: 1rem;
-        top: 10px;
-        left: 10px;
-        padding: 6px 12px;
-        border-radius: 6px;
-    }
-
     /* Hide long text */
     #found-counter .full-text {
         display: none;
@@ -243,13 +268,22 @@ h3 {
         display: inline;
     }
 
-    .checklist-footer
-    {
+    .checklist-footer{
         height: calc(100vh - 180px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
     }
 
+    .checklist-footer #found-counter {
+        margin-bottom: 10px; 
+    }
+    
     .checklist-footer h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-bottom: 8px;
     }
 
@@ -261,7 +295,7 @@ h3 {
     }
 
     .checklist-footer li {
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
         max-width: 90%;
     }
@@ -274,42 +308,87 @@ h3 {
 }
 
 /* Tablets */
-@media (min-width: 500px)  and (max-width: 600px) { 
+@media (orientation: portrait) and (min-width: 500px) and (max-width: 599px) { 
     .game-area {
         width: 100%;
     }
 
-    .checklist-footer
-    {
+    .checklist-footer {
         height: calc(100vh - 280px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .checklist-footer h3 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .checklist-footer li {
+        font-size: 1.7rem;
+        max-width: 90%;
     }
 }
 
 /* Tablets */
-@media (min-width: 600px)  and (max-width: 800px) { 
+@media (orientation: portrait) and (min-width: 600px)  and (max-width: 799px) { 
     .game-area {
         width: 100%;
     }
 
-    .checklist-footer
-    {
+    .checklist-footer {
         height: calc(100vh - 330px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .checklist-footer h3 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .checklist-footer li {
+        font-size: 1.7rem;
+        max-width: 90%;
     }
 }
 
 /* Laptops/desktops */
-@media (min-width: 800px)  and (max-width: 1000px) {  
+@media (min-width: 800px) and (max-width: 999px) {  
     .game-area {
         width: 100%;
     }
 
-    .checklist-footer
-    {
+    .checklist-footer {
         height: calc(100vh - 450px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .checklist-footer h3 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .checklist-footer li {
+        font-size: 1.7rem;
+        max-width: 90%;
     }
 }
 
-@media (min-width: 1000px)  and (max-width: 1200px) {  
+@media (min-width: 1000px) and (max-width: 1199px) {  
     .game-area {
         width: 100%;
     }
@@ -317,6 +396,12 @@ h3 {
     .checklist-footer
     {
         height: calc(100vh - 560px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
     }
 }
 
@@ -326,9 +411,20 @@ h3 {
         width: 100%;
     }
 
-    .checklist-footer
-    {
+    .checklist-footer {
         height: calc(100vh - 670px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .checklist-row {
+        flex-direction: row;
+        display: flex;
+        gap: 6px;
     }
 }
 
@@ -336,10 +432,15 @@ h3 {
     .game-area {
         width: 100%;
     }
-    
-    .checklist-footer
-    {
+
+    .checklist-footer {
         height: calc(100vh - 840px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
     }
 }
 
@@ -352,8 +453,63 @@ h3 {
     }
 }
 
-@media (orientation: landscape) and (min-width: 400px) and (max-width: 1025px) {
+/* Show the toggle button only on small screens & landscape */
+@media (orientation: landscape) and (max-width: 934px){
     .checklist-row li {
-        font-size: small;
+        font-size: 1rem;
+    }
+
+    #toggle-checklist {
+        display: inline-block;
+    }
+
+    /* Hide footer below screen by default */
+    .checklist-footer {
+        transform: translateY(100%);
+        height: calc(100vh - 300px);
+        display: flex;
+        justify-content: center;  
+        align-items: center;      
+        flex-direction: row;      
+        flex-wrap: wrap;          
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+    
+    /* Show footer when active */
+    .checklist-footer.active {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive behaviour for Nest Hub*/
+@media (width: 1024px) and (height: 600px) {
+    .checklist-footer {
+        height: calc(100vh - 450px);
+    }
+}
+
+/* Responsive behaviour for Surface Duo */
+@media (width: 720px) and (height: 540px) {
+    .checklist-footer {
+        /* height: calc(100vh - 450px); */
+        transform: translateY(0);
+    }
+
+    #toggle-checklist {
+        display: none;
+    }
+}
+
+/* Responsive behaviour for Galaxy ZFold 5 landscape */
+@media (width: 882px) and (height: 344px) {
+    .game-area #frog {
+        top: 40% !important; 
+        left: 92% !important;
     }
 }

@@ -141,6 +141,49 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
+// Move counter in the footer for phone screen portrait 
+function moveCounter() {
+    const counter = document.getElementById('found-counter');
+    const placeholder = document.querySelector('.footer-counter-placeholder');
+    const originalParent = document.querySelector('.counter-holder');
+
+    if (window.matchMedia('(max-width: 500px) and (orientation: portrait)').matches) {
+        if (!placeholder.contains(counter)) {
+            placeholder.appendChild(counter);
+            counter.style.position = 'static';
+            counter.style.margin = '10px auto';
+        }
+    } else {
+        if (!originalParent.contains(counter)) {
+            originalParent.appendChild(counter);
+            counter.style.position = 'absolute';
+            counter.style.top = '20px';
+            counter.style.right = '50px';
+            counter.style.margin = '0';
+        }
+    }
+}
+
+window.addEventListener('load', moveCounter);
+window.addEventListener('resize', moveCounter);
+
+
+// Toggle button functionality in small screens and landscape
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggle-checklist');
+    const footer = document.querySelector('.checklist-footer');
+
+    toggleButton.addEventListener('click', () => {
+        footer.classList.toggle('active');
+        if (footer.classList.contains('active')) {
+            toggleButton.textContent = 'Hide List';
+        } else {
+            toggleButton.textContent = 'Hidden Objects';
+        }
+    });
+});
+
+
 
 
 

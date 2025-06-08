@@ -78,7 +78,7 @@ At this point, I needed to add a counter for the found items, which I did and I 
 
 Further, I added a pop up message as well for when all the hidden objects are found. Finally I changed the alert() function with a modal to present the congratulations message at the end of the game in a better way.
 
-I then concentrated on improving the responsiveness of the game.
+I then concentrated on improving the responsiveness of the game. Once i managed to make the background picture show fully in all screen sizes, I started working on the footer. To make it responsive in all sizes and orientations I used different CSS stylings and I used JavaScript to move the counter from the game-area to the footer in portrait mode. In landscape mode I hid the footer and added a button to toggle it (make it appear to see the items that need to be found and dissapear to allow use better view of the background) using JavaScript as well.
 
 ## Project Structure
 
@@ -108,6 +108,8 @@ I then concentrated on improving the responsiveness of the game.
 9. I initially wrote a function updateCounter() to update the counter and I was calling this function inside the click event listener. I also put an alert (to show a congratulations message once all the hidden objects are found) inside this function. However, this was creating an unwanted behaviour: the congratulation message was showing before the final hidden object pop-up was showing and before the word was crossed. To resolve this, I've updated the function to just return the count and I changed the click event handler to save the count via the function updateCounter(). Finally, I moved the alert message inside the function for the closing of the pop-up with the hidden object info - button and background.
 
 10. I've spent a good amount of time trying to resolve responsiveness issues. The background picture, was being cut and the hidden objects were moving accross the screen. After trying numerous methods to resolve this, I have finally managed to make it acceptable, by using aspect ration and numerous media queries where I calculated the hight of the picture using the calc() function to account for the footer size. For mobiles I made sure the game is responsive in both landscape and landscape mode.
+
+11. I encountered an issue where my counter was moving to the footer when resiing the screen down, however, when resizing back up the counter would not move back out of the footer. This happened because when the counter was moved to the footer, .footer-counter-placeholder was automatically becoming its parent, and it never returned to the .game-area. To ensure that the code puts it back there I've created a wrapper div .counter-holder for the counter and updates the moveCounter() function to use these fixed containers. 
 
 
 

@@ -43,17 +43,22 @@
     <main class="game-area">
 
         <!-- Counter for found objects -->
-        <div id="found-counter">
+        <div class="counter-holder">
+            <div id="found-counter">
 
-            <!-- Name -->
-            <h1 class="custom-heading">WildFind</h1>
+                <!-- Name -->
+                <h1 class="custom-heading">WildFind</h1>
 
-            <!-- Bigger screens -->
-            <span class="full-text">Found: 0 / 5</span>
+                <!-- Bigger screens -->
+                <span class="full-text">Found: 0 / 5</span>
 
-            <!-- Mobile view -->
-            <span class="short-text">0 / 5</span>
-        </div> 
+                <!-- Mobile view -->
+                <span class="short-text">0 / 5</span>
+
+                <!-- Toggle button for small screens and landscape -->
+                <button id="toggle-checklist" aria-label="Toggle checklist">Hidden Objects</button>
+            </div> 
+        </div>
 
         <!-- Hidden objects -->
         <img src="assets/images/blue-morpho-butterfly.png" class="hidden-object" id="butterfly" style="top: 15%; left: 59%;">
@@ -61,7 +66,6 @@
         <img src="assets/images/boa-constrictor.png" class="hidden-object" id="snake" style="top: 52%; left: 15%;">
         <img src="assets/images/orchid.png" class="hidden-object" id="orchid" style="top: 20%; left: 3%;">
         <img src="assets/images/capuchin-monkey.png" class="hidden-object" id="monkey" style="top: 41%; left: 59%;">
-        <!-- </div> -->
 
         <!-- The modal -->
         <div id="infoModal" class="modal" style="display:none;">
@@ -89,7 +93,7 @@
             <div id="checklist">
 
                 <!-- List of items to find -->
-                <!-- <h3>Find These Creatures:</h3> -->
+                <h3>Find These Creatures:</h3>
                 <ul>
                     <div class="checklist-row">
                         <li id="butterfly-check">
@@ -119,6 +123,10 @@
                     </div>
                 </ul>
             </div>
+
+            <!-- Placeholder for moving counter on small screens -->
+            <div class="footer-counter-placeholder"></div>
+
         </footer>
     </main>
 </body>
