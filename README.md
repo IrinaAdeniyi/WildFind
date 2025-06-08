@@ -107,7 +107,7 @@ I then concentrated on improving the responsiveness of the game. Once i managed 
 
 9. I initially wrote a function updateCounter() to update the counter and I was calling this function inside the click event listener. I also put an alert (to show a congratulations message once all the hidden objects are found) inside this function. However, this was creating an unwanted behaviour: the congratulation message was showing before the final hidden object pop-up was showing and before the word was crossed. To resolve this, I've updated the function to just return the count and I changed the click event handler to save the count via the function updateCounter(). Finally, I moved the alert message inside the function for the closing of the pop-up with the hidden object info - button and background.
 
-10. I've spent a good amount of time trying to resolve responsiveness issues. The background picture, was being cut and the hidden objects were moving accross the screen. After trying numerous methods to resolve this, I have finally managed to make it acceptable, by using aspect ration and numerous media queries where I calculated the hight of the picture using the calc() function to account for the footer size. For mobiles I made sure the game is responsive in both landscape and landscape mode.
+10. I've spent a good amount of time trying to resolve responsiveness issues. The background picture, was being cut and the hidden objects were moving accross the screen. After trying numerous methods to resolve this, I have finally managed to make it acceptable, by using aspect ration ([w3schools](https://www.w3schools.com/cssref/css_pr_aspect-ratio.php)) and numerous media queries where I calculated the hight of the picture using the calc() function to account for the footer size. For mobiles I made sure the game is responsive in both landscape and landscape mode.
 
 11. I encountered an issue where my counter was moving to the footer when resiing the screen down, however, when resizing back up the counter would not move back out of the footer. This happened because when the counter was moved to the footer, .footer-counter-placeholder was automatically becoming its parent, and it never returned to the .game-area. To ensure that the code puts it back there I've created a wrapper div .counter-holder for the counter and updates the moveCounter() function to use these fixed containers. 
 
@@ -129,6 +129,14 @@ I then concentrated on improving the responsiveness of the game. Once i managed 
 
 1. Rainforest challenge background image was downloaded from [here](https://images.app.goo.gl/E2rXu6p7dGurHyfh8)
 2. I used [rawpixel](https://www.rawpixel.com/) for svgs and pngs
+3. I used [flaticon](https://www.flaticon.com/free-icon/jeep_3251221?term=safari&page=1&position=75&origin=search&related_id=3251221) for the favicon 
+4. [favicon](https://favicon.io/favicon-converter/)
+5. W3Schools
+6. StackOverflow
+7. AI
+8. Code Institute lessons
+9. [accesibleweb](https://accessibleweb.com/color-contrast-checker/)
+10. [coolors](https://coolors.co/)
 
 
 
