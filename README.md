@@ -41,8 +41,6 @@ CSS3
 
 JavaScript
 
-JQuery
-
 ## GitHub User Story Project
 
 A [project](https://github.com/users/IrinaAdeniyi/projects/5/views/1) containing user stories with acceptance criteria was created in GitHub. This was done to easily organize and prioritize work, as well as defining clear requirements and tracking progress.
@@ -78,15 +76,50 @@ At this point, I needed to add a counter for the found items, which I did and I 
 
 Further, I added a pop up message as well for when all the hidden objects are found. Finally I changed the alert() function with a modal to present the congratulations message at the end of the game in a better way.
 
-I then concentrated on improving the responsiveness of the game. Once i managed to make the background picture show fully in all screen sizes, I started working on the footer. To make it responsive in all sizes and orientations I used different CSS stylings and I used JavaScript to move the counter from the game-area to the footer in portrait mode. In landscape mode I hid the footer and added a button to toggle it (make it appear to see the items that need to be found and dissapear to allow use better view of the background) using JavaScript as well.
+I then concentrated on improving the responsiveness of the game. Once I managed to make the background picture show fully in all screen sizes, I started working on the footer. To make it responsive in all sizes and orientations I used different CSS stylings and I used JavaScript to move the counter from the game-area to the footer in portrait mode. In landscape mode I hid the footer and added a button to toggle it (make it appear to see the items that need to be found and dissapear to allow use better view of the background) using JavaScript as well.
+
+I then proceeded to make the pop-ups responsive, which was a quick and easy fix.
+
+I checked that the project is fully responsive. While it is fully responsive when I choose different screen sizes in the inspect mode and when I resize the width of the page manually, it is not fully responsive when I resize both the wisth and height of the page manually.
+
+Once I completed the game, I checked that all links and buttons work as expected. Once I finalised the manual checks, I used tools like HTML and CSS validators, jshint for JavaScript, as well as the Lighthouse feature in Chrome DevTools. The lighthouse tool higlighted some issues that were resolved to the best of my ability.
+
+19. Finally the README file was updated - this was also updated throughout the development process.
 
 ## Project Structure
+- **assets**: Contains the static files for the website.
+  - **css**: The folder containing the main styles for the site (style.css).
+  - **favicon_io**: Favicon folder
+  - **images**: Contains all images for the website.
+  - **js**: Contains the JavaScript file: script.js
+  - **wireframes**: A folder containing the wireframes of this project
+- **index.html**: The HTML file
+- **README**: A detailed description of the whole project 
 
 ## Features
 
 ## Possible future features
+In the future I would like to implement the remaining user stories (could-have): accesibility and challenges. This means that I would like to add features to offer the user options for dark and bright modes, as well as sounds. In addition, I would have liked to add a timer and add some difficulty levels to the game. Finally, more challenges would have been nice to have as well, such as *Big Five: Savannah Challenge*
 
 ## Testing
+Detailed testing was done on the website to ensure the website works properly.
+
+| Feature    | Expected behaviour | Outcome  |
+| -----------|:------------------:| --------:|
+| Header     | Looks good in all screen sizes|  Works as expected        |
+| Logo       | On click takes you to home page                   | Works as expected         |
+| Navigation bar | Active page bold, colapse on phone size, logo only on mobile       | Works as expected         |
+| All links in navbar take you to the right page | For example, Book Now akes you to the booking form page | Works as expected
+| Abouts us section | Looks good on all screen sizes | Works as expected |
+| Services section on home page | Links take you to the services page and cards display properly in all screen sizes | Works as expected
+| Services page | Looks good on all screens | Works as expected
+| Flip cards | On hoover they flip to reveal more information | Works as expected
+| Gallery page | Fully responsive in all screen sizes: 1 column - phones, 2 columns - tablets and 3 columns - laptops and bigger screens | Works as expected
+| Booking form page | Fully responsive on all screens | Works as expected
+| Form validation | The form cannot be submitted without the required information | Works as expected
+| Confirmation page | Fully responsive on all devices and matches the rest of the website | Works as expected
+| All buttons and links | Take you to the right place | Works as expected
+| Footer | Fully responsive and containing all the necessary information | Works as expected
 
 ## Troubleshooting
 1. The first issue I encountered was the crossing of the words, once the hidden object is found. Initially it didn't work because I did not wrapped it in the $(document).ready(...) function, to ensure it runs after the page is loaded (i.e. the HTML document has been fully loaded).
@@ -111,9 +144,8 @@ I then concentrated on improving the responsiveness of the game. Once i managed 
 
 11. I encountered an issue where my counter was moving to the footer when resiing the screen down, however, when resizing back up the counter would not move back out of the footer. This happened because when the counter was moved to the footer, .footer-counter-placeholder was automatically becoming its parent, and it never returned to the .game-area. To ensure that the code puts it back there I've created a wrapper div .counter-holder for the counter and updates the moveCounter() function to use these fixed containers. 
 
-
-
 ## Remaining bugs
+I have spend a considerable amount of time to resolve responsivenes issues. In retrospective, I learned that probably the best approach for a game is to start coding for small screens first and scale from there. After numerous and tidious CSS trials to make the game responsive in all the possible screens, I have managed to considerably improve responsiveness: all standard screen sizes from the inspect mode work well, as well as manually resizing the page's width. The only remaining bug at the time of submission is the fact that the game is not fully responsive when both the page's width and height are manually resized.
 
 ## Website checks using validation tools
 
@@ -124,7 +156,22 @@ I then concentrated on improving the responsiveness of the game. Once i managed 
 
 ## Deployment
 
+The site was deployed to GitHub pages.
+
+I used the following steps to deploy:
+
+1. Go to repository WildFind github.
+2. Settings on the top right corner.
+3. Locate Pages in the menu section on the left of the screen.
+4. Select main option for the branch.
+5. Click save.
+6. Reload the page and after a little while a link for the deployed site will appear at the top.
+7. When you click the link it will take you to the site.
+
 ## Setup Instructions
+1. Clone my [repository](https://github.com/IrinaAdeniyi/FunTime-Celebrations?tab=readme-ov-file#start-of-content).
+
+2. Open index.html in your browser, or deploy via GitHub Pages.
 
 ## Credits
 

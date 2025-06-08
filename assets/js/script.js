@@ -91,7 +91,9 @@ document.addEventListener('DOMContentLoaded', function(){
             // Show the pop-up (modal info)
             const item = hiddenObjects[id];
             if (item) {
-                document.getElementById('modal-image').src = item.image;
+                const modalImage = document.getElementById('modal-image');
+                modalImage.src = item.image;
+                modalImage.style.display = 'block';
                 document.getElementById('modal-title').textContent = item.name;
                 document.getElementById('modal-color').textContent = item.color;
                 document.getElementById('modal-habitat').textContent = item.habitat;
