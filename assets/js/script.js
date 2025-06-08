@@ -183,6 +183,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Play again logic
+window.addEventListener('DOMContentLoaded', () => {
+document.getElementById('play-again-btn').addEventListener('click', function() {
+    location.reload();
+});
+
+    document.getElementById('congratsModal').style.display = 'none';
+});
+
 
 
 
