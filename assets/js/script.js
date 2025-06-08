@@ -1,5 +1,3 @@
-/* jshint esversion: 6 */
-
 //Store object details to use in the modal
 const hiddenObjects = {
     butterfly: {
@@ -47,7 +45,7 @@ const hiddenObjects = {
     }
 };
 
-// Funtion to update the counter
+// Function to update the counter
 function updateCounter(){
     let foundCount = 0;
     const allObjects = document.querySelectorAll('.hidden-object');
@@ -61,7 +59,7 @@ function updateCounter(){
     const totalItems = Object.keys(hiddenObjects).length;
 
     // Update the counter element on the page
-    document.getElementById('found-counter').textContent = `Found: ${foundCount} / ${totalItems}`;
+    document.getElementById('found-counter-text').textContent = `Found: ${foundCount} / ${totalItems}`;
     
     return foundCount;
 }
