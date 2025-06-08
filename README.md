@@ -78,6 +78,7 @@ At this point, I needed to add a counter for the found items, which I did and I 
 
 Further, I added a pop up message as well for when all the hidden objects are found. Finally I changed the alert() function with a modal to present the congratulations message at the end of the game in a better way.
 
+I then concentrated on improving the responsiveness of the game.
 
 ## Project Structure
 
@@ -105,6 +106,8 @@ Further, I added a pop up message as well for when all the hidden objects are fo
 8. The background picture was not fitting inside of the screen and scrolling was needed. This, in my opinion, was not suitable for a game, therefore, I looked up solutions and I tried a couple options such as background-size: contain [stackoverflow](https://stackoverflow.com/questions/33578169/css-make-image-fit-screen-so-no-scroll-bars-appear), but this didn't work. Finally, I discovered the calc() function in CSS ([W3Schools](https://www.w3schools.com/cssref/func_calc.php)), which worked. Initially, this seemed to not do anything, however, after researching I discovered that the *-* needs space before and after ([stackoverflow](https://stackoverflow.com/questions/30678942/does-calc-work-for-background-size-of-image-in-css)). 
 
 9. I initially wrote a function updateCounter() to update the counter and I was calling this function inside the click event listener. I also put an alert (to show a congratulations message once all the hidden objects are found) inside this function. However, this was creating an unwanted behaviour: the congratulation message was showing before the final hidden object pop-up was showing and before the word was crossed. To resolve this, I've updated the function to just return the count and I changed the click event handler to save the count via the function updateCounter(). Finally, I moved the alert message inside the function for the closing of the pop-up with the hidden object info - button and background.
+
+10. I've spent a good amount of time trying to resolve responsiveness issues. The background picture, was being cut and the hidden objects were moving accross the screen. After trying numerous methods to resolve this, I have finally managed to make it acceptable, by using aspect ration and numerous media queries where I calculated the hight of the picture using the calc() function to account for the footer size. For mobiles I made sure the game is responsive in both landscape and landscape mode.
 
 
 

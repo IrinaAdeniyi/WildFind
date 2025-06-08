@@ -25,31 +25,26 @@ h3 {
     font-family: var(--primary-font);
 }
 
-
-
 /* Hero section */
 .game-area {
+    position: relative;
+    width: 100%;
+    min-width: 350px;
+    aspect-ratio: 16 / 9;
     background-image: url('../images/rainforest-bkg-2.jpg');
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
-    position: relative;
+    background-position: center;
     overflow: hidden;
-    height: calc(100vh - 130px);
-    width: 100vw;
 }
 
 /* h1 styling */
 .custom-heading {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    margin: 0;
-    z-index: 10;  /* keep text above background */
+    position: relative;
+    z-index: 10;  
     display: flex;
     align-items: center;
     color: #000000;
-    font-size: 3.5rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -80,9 +75,8 @@ h3 {
 /* Hidden objects */
 .hidden-object {
     position: absolute;
-    width: 5vw;
+    width: 10%;
     cursor: pointer;
-    height: auto;
 }
 
 /* Hidden object facts pop-up modal styling */
@@ -165,13 +159,13 @@ h3 {
     text-align: center;
     bottom: 0;
     width: 100%;
+    min-height: 30px;
     z-index: 999; 
     color: #000000;
 }
 
 .checklist-footer h3 {
     margin-top: 12px;
-
 }
 
 .checklist-footer ul {
@@ -199,20 +193,23 @@ h3 {
 }
 
 /* Media queries */
+/* Smaller than phone */
+@media (max-width: 339px) { 
+    .checklist-footer
+{
+    min-height: calc(100vh - 194px);
+}
+}
 
 /* Small phones */
-@media (max-width: 600px) { 
+@media (min-width: 340px) { 
     .game-area {
-        height: 100vh;
-        min-height: unset;
-        background-size: cover;
-        background-position: center;
+        width: 100%;
     }
 
     .hidden-object {
-        width: 40px;   
-        max-width: 10vw; 
-        height: auto;
+        width: 4vw;   
+        position: absolute;
     }
 
     .modal {
@@ -246,9 +243,9 @@ h3 {
         display: inline;
     }
 
-    .checklist-footer {
-        padding: 5px;
-        font-size: 0.9rem;
+    .checklist-footer
+    {
+        height: calc(100vh - 180px);
     }
 
     .checklist-footer h3 {
@@ -274,20 +271,89 @@ h3 {
         height: 20px;
         margin-right: 5px;
     }
-
-}
-
-/* Phones & small devices */
-@media (max-width: 767px) {
-    
 }
 
 /* Tablets */
-@media (max-width: 992px) { 
+@media (min-width: 500px)  and (max-width: 600px) { 
+    .game-area {
+        width: 100%;
+    }
 
+    .checklist-footer
+    {
+        height: calc(100vh - 280px);
+    }
+}
+
+/* Tablets */
+@media (min-width: 600px)  and (max-width: 800px) { 
+    .game-area {
+        width: 100%;
+    }
+
+    .checklist-footer
+    {
+        height: calc(100vh - 330px);
+    }
 }
 
 /* Laptops/desktops */
-@media (max-width: 1200px) {  
+@media (min-width: 800px)  and (max-width: 1000px) {  
+    .game-area {
+        width: 100%;
+    }
 
+    .checklist-footer
+    {
+        height: calc(100vh - 450px);
+    }
+}
+
+@media (min-width: 1000px)  and (max-width: 1200px) {  
+    .game-area {
+        width: 100%;
+    }
+
+    .checklist-footer
+    {
+        height: calc(100vh - 560px);
+    }
+}
+
+/* xl screens */
+@media (min-width: 1200px)  {  
+    .game-area {
+        width: 100%;
+    }
+
+    .checklist-footer
+    {
+        height: calc(100vh - 670px);
+    }
+}
+
+@media (min-width: 1500px)  {  
+    .game-area {
+        width: 100%;
+    }
+    
+    .checklist-footer
+    {
+        height: calc(100vh - 840px);
+    }
+}
+
+/* Styles for landscape orientation */
+@media (orientation: landscape) {
+    .checklist-row {
+        flex-direction: row;
+        display: flex;
+        gap: 6px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 400px) and (max-width: 1025px) {
+    .checklist-row li {
+        font-size: small;
+    }
 }
