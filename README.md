@@ -4,7 +4,7 @@
 
 As a passionate web developer I love to combine fun with learning through interactive, user-driven experiences. This project showcases how data doesn’t have to be static — it can be explored, played with, and discovered.
 
-My aim is to create a site that’s engaging for users of all ages, while also presenting meaningful information about the natural world. Whether you're here to test your skills, learn about wildlife, or just enjoy a beautifully crafted hidden objects safari game, I hope this experience brings you something new.
+My aim is to create a site that’s engaging for users of all ages, while also presenting meaningful information about the natural world. Whether you're here to test your skills, learn about wildlife, or just enjoy a beautifully crafted hidden objects rainforest game, I hope this experience brings you something new.
 
 This project was built as part of my journey in learning and applying front-end technologies, and it reflects the following values:
 
@@ -20,14 +20,27 @@ Thanks for exploring with me — and happy finding! 🦁🦓🦒
 
 ## Mockups
 
-### Phones
-![]()
+### Phones - Galaxy Z Fold 5
+![](assets/mock-ups/GalaxyZFold5-portrait.png)
+![](assets/mock-ups/GalaxyZFold5-landscape.png)
+![](assets/mock-ups/GalaxyZFold5-info-portrait.png)
+![](assets/mock-ups/GalaxyZFold5-info-landscape.png)
+![](assets/mock-ups/GalaxyZFold5-landscape-footer.png)
+![](assets/mock-ups/GalaxyZFold5-congrats-portrait.png)
+![](assets/mock-ups/GalaxyZFold5-congrats-landscape.png)
 
-### Tablets
-![]()
+### Tablets - iPad Air
+![](assets/mock-ups/iPadAir-portrait.png)
+![](assets/mock-ups/iPadAir-portrait-info.png)
+![](assets/mock-ups/iPadAir-portrait-congrats.png)
+![](assets/mock-ups/iPadAir-landscape.png)
+![](assets/mock-ups/iPadAir-landscape-info.png)
+![](assets/mock-ups/iPadAir-landscape-congrats.png)
 
-### Laptop
-![]()
+### Laptop/desktops - NsetHubMax
+![](assets/mock-ups/NestHubMax.png)
+![](assets/mock-ups/NestHubMax-info.png)
+![](assets/mock-ups/NestHubMax-congrats.png)
 
 ##  Live Demo
 
@@ -38,6 +51,8 @@ Thanks for exploring with me — and happy finding! 🦁🦓🦒
 HTML5
 
 CSS3
+
+Bootstrap
 
 JavaScript
 
@@ -82,7 +97,7 @@ I then proceeded to make the pop-ups responsive, which was a quick and easy fix.
 
 I checked that the project is fully responsive. While it is fully responsive when I choose different screen sizes in the inspect mode and when I resize the width of the page manually, it is not fully responsive when I resize both the wisth and height of the page manually.
 
-Once I completed the game, I checked that all links and buttons work as expected. Once I finalised the manual checks, I used tools like HTML and CSS validators, jshint for JavaScript, as well as the Lighthouse feature in Chrome DevTools. The lighthouse tool higlighted some issues that were resolved to the best of my ability.
+Once I completed the game, I checked that all links and buttons work as expected. Once I finalised the manual checks, I used tools like HTML and CSS validators, jshint for JavaScript, as well as the Lighthouse feature in Chrome DevTools. The lighthouse tool higlighted some issues that were resolved to the best of my ability. This was also checked in the deployed site.
 
 Finally the README file was updated - this was also updated throughout the development process.
 
@@ -92,6 +107,8 @@ Finally the README file was updated - this was also updated throughout the devel
   - **favicon_io**: Favicon folder
   - **images**: Contains all images for the website.
   - **js**: Contains the JavaScript file: script.js
+  - **lighthouse**: Contains a printscreen of the lighthouse scores
+  - **mock-ups**: Contains different printscreens for different sizes and features
   - **wireframes**: A folder containing the wireframes of this project
 - **index.html**: The HTML file
 - **README**: A detailed description of the whole project 
@@ -123,6 +140,8 @@ Finally the README file was updated - this was also updated throughout the devel
 
 - The counter updates every time a new hidden object is found
 
+- The counter also moves from the main game area to the footer on phones screens portrait orientation for responsiveness.
+
 4. Footer
 ![](assets/mock-ups/footer.png)
 
@@ -140,7 +159,7 @@ Finally the README file was updated - this was also updated throughout the devel
 - It also contains a button, who allows the user to play the game again.
 
 ## Possible future features
-In the future I would like to implement the remaining user stories (could-have): accesibility and challenges. This means that I would like to add features to offer the user options for dark and bright modes, as well as sounds. In addition, I would have liked to add a timer and add some difficulty levels to the game. Finally, more challenges would have been nice to have as well, such as *Big Five: Savannah Challenge*
+In the future I would like to implement the remaining user stories (could-have): accesibility and challenges. This means that I would like to add features to offer the user options for dark and bright modes, as well as sounds. In addition, I would have liked to add a timer and add some difficulty levels to the game. Finally, more challenges would have been nice to have as well, such as *Big Five: Savannah Challenge*. Also, once the user finishes one game and chosses to play again, it would be good to have new items hidden around.
 
 ## Testing
 Detailed testing was done on the website to ensure the website works properly.
@@ -184,8 +203,10 @@ Detailed testing was done on the website to ensure the website works properly.
 In very few screen sizes, the footer content needs to be scrolled. However, these screen sizes are not standard screens sizes, therefore, the chance of a user having to scroll the footer is very low.Also, this doesn't break the functionality of the website, it is more a UX issue. At this moment, attempting to address this issue might break the rest of the code. In the future this could absolutely be attempted and resolved. Very small screens in landscape are also not fully responsive.
 
 ## Website checks using validation tools
-
 ### Lighthouse scores
+While I tried my best to get very good lighthouse scores (preloading images and links and only necessary CSS, resizing photos to smaller sizes - all well under 300kb), the maximum I could get for performance is 73, as shown below. This could absolutely be looked into in the future for improvement.
+
+![](assets/lighthouse/lighthouse-scores.png)
 
 **Both the W3C Markup Validator and W3C CSS validator returned no errors.**
 **JavaScript code checked with JSHint to validate syntax and spot potential issues. All cleared.**
@@ -205,7 +226,7 @@ I used the following steps to deploy:
 7. When you click the link it will take you to the site.
 
 ## Setup Instructions
-1. Clone my [repository](https://github.com/IrinaAdeniyi/FunTime-Celebrations?tab=readme-ov-file#start-of-content).
+1. Clone my [repository](https://github.com/IrinaAdeniyi/WildFind.git).
 
 2. Open index.html in your browser, or deploy via GitHub Pages.
 
@@ -222,6 +243,7 @@ I used the following steps to deploy:
 9. [accesibleweb](https://accessibleweb.com/color-contrast-checker/)
 10. [coolors](https://coolors.co/)
 11. [Shrink.media](https://www.shrink.media/upload)
+12. My tutor and my mentor's help and suggestions
 
 
 
