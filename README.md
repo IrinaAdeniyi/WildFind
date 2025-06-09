@@ -25,7 +25,7 @@ Thanks for exploring with me — and happy finding! 🦁🦓🦒
 ![](assets/mock-ups/GalaxyZFold5-portrait.png)
 #### Game area landscape hidden footer
 ![](assets/mock-ups/GalaxyZFold5-landscape.png)
-#### Info pop-up landscape with footer
+#### Game area landscape with footer
 ![](assets/mock-ups/GalaxyZFold5-landscape-footer.png)
 #### Info pop-up portrait
 ![](assets/mock-ups/GalaxyZFold5-info-portrait.png)
