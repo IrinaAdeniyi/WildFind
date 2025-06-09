@@ -23,14 +23,14 @@ Thanks for exploring with me — and happy finding! 🦁🦓🦒
 ### Phones - Galaxy Z Fold 5
 #### Game area portrait
 ![](assets/mock-ups/GalaxyZFold5-portrait.png)
-#### Game area landscape
+#### Game area landscape hidden footer
 ![](assets/mock-ups/GalaxyZFold5-landscape.png)
-#### Info pop-up portrait
-![](assets/mock-ups/GalaxyZFold5-info-portrait.png)
-#### Info pop-up landscape with hidden footer
-![](assets/mock-ups/GalaxyZFold5-info-landscape.png)
 #### Info pop-up landscape with footer
 ![](assets/mock-ups/GalaxyZFold5-landscape-footer.png)
+#### Info pop-up portrait
+![](assets/mock-ups/GalaxyZFold5-info-portrait.png)
+#### Info pop-up landscape 
+![](assets/mock-ups/GalaxyZFold5-info-landscape.png)
 #### Congratulations pop-up portrait
 ![](assets/mock-ups/GalaxyZFold5-congrats-portrait.png)
 #### Congratulations pop-up landscape
