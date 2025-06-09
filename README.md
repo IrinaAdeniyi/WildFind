@@ -50,7 +50,7 @@ Thanks for exploring with me — and happy finding! 🦁🦓🦒
 #### Congratulations pop-up landscape
 ![](assets/mock-ups/iPadAir-landscape-congrats.png)
 
-### Laptop/desktops - NsetHubMax
+### Laptop/desktops - NestHubMax
 #### Game area
 ![](assets/mock-ups/NestHubMax.png)
 #### Info pop-up
