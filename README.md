@@ -21,26 +21,26 @@ Thanks for exploring with me — and happy finding! 🦁🦓🦒
 ## Mockups
 
 ### Phones - Galaxy Z Fold 5
-![](assets/mock-ups/GalaxyZFold5-portrait.png)
-![](assets/mock-ups/GalaxyZFold5-landscape.png)
-![](assets/mock-ups/GalaxyZFold5-info-portrait.png)
-![](assets/mock-ups/GalaxyZFold5-info-landscape.png)
-![](assets/mock-ups/GalaxyZFold5-landscape-footer.png)
-![](assets/mock-ups/GalaxyZFold5-congrats-portrait.png)
-![](assets/mock-ups/GalaxyZFold5-congrats-landscape.png)
+![Game area portrait](assets/mock-ups/GalaxyZFold5-portrait.png)
+![Game area landscape](assets/mock-ups/GalaxyZFold5-landscape.png)
+![Info pop-up portrait](assets/mock-ups/GalaxyZFold5-info-portrait.png)
+![Info pop-up landscape with hidden footer](assets/mock-ups/GalaxyZFold5-info-landscape.png)
+![Info pop-up landscape with footer](assets/mock-ups/GalaxyZFold5-landscape-footer.png)
+![Congratulations pop-up portrait](assets/mock-ups/GalaxyZFold5-congrats-portrait.png)
+![Congratulations pop-up landscape](assets/mock-ups/GalaxyZFold5-congrats-landscape.png)
 
 ### Tablets - iPad Air
-![](assets/mock-ups/iPadAir-portrait.png)
-![](assets/mock-ups/iPadAir-portrait-info.png)
-![](assets/mock-ups/iPadAir-portrait-congrats.png)
-![](assets/mock-ups/iPadAir-landscape.png)
-![](assets/mock-ups/iPadAir-landscape-info.png)
-![](assets/mock-ups/iPadAir-landscape-congrats.png)
+![Game area portrait](assets/mock-ups/iPadAir-portrait.png)
+![Info pop-up portrait](assets/mock-ups/iPadAir-portrait-info.png)
+![Congratulations pop-up portrait](assets/mock-ups/iPadAir-portrait-congrats.png)
+![Game area landscape](assets/mock-ups/iPadAir-landscape.png)
+![Info pop-up landscape](assets/mock-ups/iPadAir-landscape-info.png)
+![Congratulations pop-up landscape](assets/mock-ups/iPadAir-landscape-congrats.png)
 
 ### Laptop/desktops - NsetHubMax
-![](assets/mock-ups/NestHubMax.png)
-![](assets/mock-ups/NestHubMax-info.png)
-![](assets/mock-ups/NestHubMax-congrats.png)
+![Game area](assets/mock-ups/NestHubMax.png)
+![Info pop-up](assets/mock-ups/NestHubMax-info.png)
+![Congratulations pop-up](assets/mock-ups/NestHubMax-congrats.png)
 
 ##  Live Demo
 
