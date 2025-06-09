@@ -84,7 +84,7 @@ I checked that the project is fully responsive. While it is fully responsive whe
 
 Once I completed the game, I checked that all links and buttons work as expected. Once I finalised the manual checks, I used tools like HTML and CSS validators, jshint for JavaScript, as well as the Lighthouse feature in Chrome DevTools. The lighthouse tool higlighted some issues that were resolved to the best of my ability.
 
-19. Finally the README file was updated - this was also updated throughout the development process.
+Finally the README file was updated - this was also updated throughout the development process.
 
 ## Project Structure
 - **assets**: Contains the static files for the website.
@@ -98,6 +98,47 @@ Once I completed the game, I checked that all links and buttons work as expected
 
 ## Features
 
+1. Main game area with hidden objects
+![](assets/mock-ups/Nest-Hub-max.png)
+
+- The background image is responsive on all devices. 
+
+- The hidden objects keep their position and look good in all screen sizes. 
+
+2. Hidden objects info pop-up
+![](assets/mock-ups/NestHubMax-info.png)
+
+- When a user hover on a hidden object the cursor shows as a little pointing hand.
+- The info pop-up works well in all screen sizes.
+- The pop-up appears when the user clicks on a hidden object.
+- To close the pop-up the user can either click the classic x on the top right corner or just click outside of the pop-up.
+
+
+3. Found hidden objects counter
+![](assets/mock-ups/counter.png)
+
+- This section is fully responsive in all screen sizes, in special screen sizes such as Galaxy Z Fold 5 lanscape orientation, the counter also contains a button to help toggle the footer for responsivenes. The button text updates as needed.
+![](assets/mock-ups/GalaxyZ-counter.png)
+![](assets/mock-ups/GalaxyZ-counter-hide.png)
+
+- The counter updates every time a new hidden object is found
+
+4. Footer
+![](assets/mock-ups/footer.png)
+
+- This section is responsive, however I would have liked to be able to eliminate the scrolling that happenes in certain screen sizes.
+
+- Every time a hidden object is found the corresponding word in the footer gets crossed.
+
+5. Congratulations pop-up
+![](assets/mock-ups/NestHubMax-congrats.png)
+
+- This section is fully responsive.
+
+- Once the user finds all of the hidden objects the pop-up appears.
+
+- It also contains a button, who allows the user to play the game again.
+
 ## Possible future features
 In the future I would like to implement the remaining user stories (could-have): accesibility and challenges. This means that I would like to add features to offer the user options for dark and bright modes, as well as sounds. In addition, I would have liked to add a timer and add some difficulty levels to the game. Finally, more challenges would have been nice to have as well, such as *Big Five: Savannah Challenge*
 
@@ -106,20 +147,11 @@ Detailed testing was done on the website to ensure the website works properly.
 
 | Feature    | Expected behaviour | Outcome  |
 | -----------|:------------------:| --------:|
-| Header     | Looks good in all screen sizes|  Works as expected        |
-| Logo       | On click takes you to home page                   | Works as expected         |
-| Navigation bar | Active page bold, colapse on phone size, logo only on mobile       | Works as expected         |
-| All links in navbar take you to the right page | For example, Book Now akes you to the booking form page | Works as expected
-| Abouts us section | Looks good on all screen sizes | Works as expected |
-| Services section on home page | Links take you to the services page and cards display properly in all screen sizes | Works as expected
-| Services page | Looks good on all screens | Works as expected
-| Flip cards | On hoover they flip to reveal more information | Works as expected
-| Gallery page | Fully responsive in all screen sizes: 1 column - phones, 2 columns - tablets and 3 columns - laptops and bigger screens | Works as expected
-| Booking form page | Fully responsive on all screens | Works as expected
-| Form validation | The form cannot be submitted without the required information | Works as expected
-| Confirmation page | Fully responsive on all devices and matches the rest of the website | Works as expected
-| All buttons and links | Take you to the right place | Works as expected
-| Footer | Fully responsive and containing all the necessary information | Works as expected
+| Page background | Looks good in all screen sizes|  Works as expected  |
+| Footer       | Looks good in all screen sizes and the hidden object corresponding word in the footer is crossed once the hidden object is cliked | Works as expected in most screen sizes, with a need for scrolling in very few screen sizes - when the page is manually resized - without breaking the functionality of the website and the logic works without issues in all screen sizes |
+| Hidden objects | Responsive with page resizing, little pointer appears when hovered over, the object dissapears when cliked, a pop-up appears with a picture and info regarding the hidden object | Works as expected         |
+| Counter | Updates as the hidden objects are found and it is fully responsive in all screen sizes (moving from the main screen to the footer as needed) | Works as expected
+| Congratulations modal | Looks good on all screen sizes, appears after all the objects are found and contains a button to refresh the game and play again, which works well and adapts to all scren sizes | Works as expected |
 
 ## Troubleshooting
 1. The first issue I encountered was the crossing of the words, once the hidden object is found. Initially it didn't work because I did not wrapped it in the $(document).ready(...) function, to ensure it runs after the page is loaded (i.e. the HTML document has been fully loaded).
@@ -146,8 +178,10 @@ Detailed testing was done on the website to ensure the website works properly.
 
 12. While using the Markup Validator I got an error because in the modal in HTML I did not have a src for the img. Therefore I added # and in-line styling to hide it. However, this was removing all of my photos from the pop-up. To resolve this I just changed the js to show the image (override the display: none used in line in the HTML).
 
+13. I have managed to make the website alsmost fully responsive by playing some more with my CSS and I realised some of the changes I have done to make the footer dissapear on landscape phone screens, were breaking my responsivenes, so I took it out and made the phone landscape responsive without removing the footer. However, there have been some special situations where I had to write code specifically for a device such as Samsung Galaxy A51/71, Surface Duo, Nest Hub and Galaxy ZFold 5 all in landscape. I kept the hidden footer for both Samsung Galaxy A51/71 and Galaxy ZFold 5.
+
 ## Remaining bugs
-I have spend a considerable amount of time to resolve responsivenes issues. In retrospective, I learned that probably the best approach for a game is to start coding for small screens first and scale from there. After numerous and tidious CSS trials to make the game responsive in all the possible screens, I have managed to considerably improve responsiveness: all standard screen sizes from the inspect mode work well, as well as manually resizing the page's width. The only remaining bug at the time of submission is the fact that the game is not fully responsive when both the page's width and height are manually resized.
+In very few screen sizes, the footer content needs to be scrolled. However, these screen sizes are not standard screens sizes, therefore, the chance of a user having to scroll the footer is very low.Also, this doesn't break the functionality of the website, it is more a UX issue. At this moment, attempting to address this issue might break the rest of the code. In the future this could absolutely be attempted and resolved. Very small screens in landscape are also not fully responsive.
 
 ## Website checks using validation tools
 

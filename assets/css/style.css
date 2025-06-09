@@ -250,6 +250,10 @@ h3 {
         padding: 15px;
     }
 
+    .hidden-object {
+        width: 6vw;
+    }
+
     .modal {
         position: fixed;
         top: 0; 
@@ -270,8 +274,7 @@ h3 {
     }
 
     .hidden-object {
-        width: 5vw;   
-        position: absolute;
+        width: 6vw;   
     }
 
     /* Move counter in the footer */
@@ -343,6 +346,10 @@ h3 {
     .checklist-footer h3 {
         display: none;
     }
+
+    .hidden-object {
+        width: 6vw;
+    }
 }
 
 /* Tablets */
@@ -368,6 +375,10 @@ h3 {
     .checklist-footer li {
         max-width: 90%;
     }
+
+    .hidden-object {
+        width: 6vw;
+    }
 }
 
 /* Tablets */
@@ -392,6 +403,10 @@ h3 {
 
     .checklist-footer li {
         max-width: 90%;
+    }
+
+    .hidden-object {
+        width: 6vw;
     }
 }
 
@@ -420,6 +435,10 @@ h3 {
         max-width: 90%;
         display: flex;
         align-items: center;
+    }
+
+    .hidden-object {
+        width: 6vw;
     }
 }
 
@@ -503,7 +522,7 @@ h3 {
 }
 
 
-/* Responsive behaviour for Nest Hub*/
+/* Responsive behaviour for Nest Hub */
 @media (width: 1024px) and (height: 600px) {
     .checklist-footer {
         height: calc(100vh - 450px);
@@ -520,13 +539,43 @@ h3 {
 /* Responsive behaviour for Samsung Galaxy A51/71 */
 @media (width: 914px) and (height: 412px) {
     .checklist-footer {
-        height: 50px !important;
+        display: flex;
+        flex-direction: column;     
+        align-items: center;        
+        justify-content: center;     
+        text-align: center; 
+        visibility: hidden;
+    }
+    
+
+    .checklist-footer h3 {
+        font-size: 1rem;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .checklist-footer ul {
+        gap: 8px;
+        justify-content: center;
+        text-align: center;
     }
 
     .checklist-footer li {
-        display: flex;
-        flex-direction: row;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .checklist-footer.active {
+        visibility: visible;
+    }
+    
+    #toggle-checklist {
+        display: inline-block;
+    }
+
+    .game-area #frog {
+        top: 40% !important; 
+        left: 92% !important;
     }
 }
 

@@ -174,14 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('toggle-checklist');
     const footer = document.querySelector('.checklist-footer');
 
-    // toggleButton.addEventListener('click', () => {
-    //     footer.classList.toggle('active');
-    //     if (footer.classList.contains('active')) {
-    //         toggleButton.textContent = 'Hide List';
-    //     } else {
-    //         toggleButton.textContent = 'Hidden Objects';
-    //     }
-    // });
     if (!toggleButton || !footer) return;
 
     toggleButton.addEventListener('click', () => {
