@@ -276,7 +276,7 @@ h3 {
 
     /* Move counter in the footer */
     #found-counter {
-        position: relative;
+        position: fixed;
         margin: 10px auto 0;
         display: block;
         font-size: 1rem;
@@ -326,13 +326,27 @@ h3 {
     }
 
     .checklist-footer li {
-
         max-width: 90%;
     }
 }
 
+@media (orientation: landscape) and (min-width: 667px) and (max-width: 932px) {
+    .checklist-row li {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .checklist-footer h3 {
+        display: none;
+    }
+}
+
 /* Tablets */
-@media (orientation: portrait) and (min-width: 500px) and (max-width: 599px) { 
+@media (min-width: 500px) and (max-width: 599px) { 
     .game-area {
         width: 100%;
     }
@@ -348,18 +362,16 @@ h3 {
     }
 
     .checklist-footer h3 {
-        font-size: 1.7rem;
         margin-bottom: 8px;
     }
 
     .checklist-footer li {
-        font-size: 1.7rem;
         max-width: 90%;
     }
 }
 
 /* Tablets */
-@media (orientation: portrait) and (min-width: 600px) and (max-width: 799px) { 
+@media (min-width: 600px) and (max-width: 799px) { 
     .game-area {
         width: 100%;
     }
@@ -375,12 +387,10 @@ h3 {
     }
 
     .checklist-footer h3 {
-        font-size: 1.7rem;
         margin-bottom: 8px;
     }
 
     .checklist-footer li {
-        font-size: 1.7rem;
         max-width: 90%;
     }
 }
@@ -430,12 +440,10 @@ h3 {
     }
 
     .checklist-footer h3 {
-        font-size: 1.5rem;
         margin-bottom: 8px;
     }
 
     .checklist-footer li {
-        font-size: 1.5rem;
         max-width: 90%;
         display: flex;
         align-items: center;
@@ -494,39 +502,6 @@ h3 {
     }
 }
 
-/* Show the toggle button only on small screens & landscape */
-@media (orientation: landscape) and (max-width: 934px){
-    .checklist-row li {
-        font-size: 1rem;
-    }
-
-    #toggle-checklist {
-        display: inline-block;
-    }
-
-    /* Hide footer below screen by default */
-    .checklist-footer {
-        transform: translateY(100%);
-        height: calc(100vh - 300px);
-        display: flex;
-        justify-content: center;  
-        align-items: center;      
-        flex-direction: row;      
-        flex-wrap: wrap;          
-        text-align: center;
-        padding: 15px;
-        width: 100%;
-        height: auto;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-    }
-    
-    /* Show footer when active */
-    .checklist-footer.active {
-        transform: translateY(0);
-    }
-}
 
 /* Responsive behaviour for Nest Hub*/
 @media (width: 1024px) and (height: 600px) {
@@ -537,18 +512,61 @@ h3 {
 
 /* Responsive behaviour for Surface Duo */
 @media (width: 720px) and (height: 540px) {
+    .checklist-footer h3{
+        display: block;
+    }
+}
+
+/* Responsive behaviour for Samsung Galaxy A51/71 */
+@media (width: 914px) and (height: 412px) {
     .checklist-footer {
-        /* height: calc(100vh - 450px); */
-        transform: translateY(0);
+        height: 50px !important;
     }
 
-    #toggle-checklist {
-        display: none;
+    .checklist-footer li {
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
     }
 }
 
 /* Responsive behaviour for Galaxy ZFold 5 landscape */
 @media (width: 882px) and (height: 344px) {
+    .checklist-footer {
+        display: flex;
+        flex-direction: column;     
+        align-items: center;        
+        justify-content: center;     
+        text-align: center; 
+        visibility: hidden;
+    }
+    
+
+    .checklist-footer h3 {
+        font-size: 1rem;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .checklist-footer ul {
+        gap: 8px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .checklist-footer li {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .checklist-footer.active {
+        visibility: visible;
+    }
+    
+    #toggle-checklist {
+        display: inline-block;
+    }
+
     .game-area #frog {
         top: 40% !important; 
         left: 92% !important;

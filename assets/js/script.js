@@ -169,19 +169,24 @@ function moveCounter() {
 window.addEventListener('load', moveCounter);
 window.addEventListener('resize', moveCounter);
 
-
-// Toggle button functionality in small screens and landscape
+// Toggle button functionality in Galaxy Z Fold 5 landscape
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('toggle-checklist');
     const footer = document.querySelector('.checklist-footer');
 
+    // toggleButton.addEventListener('click', () => {
+    //     footer.classList.toggle('active');
+    //     if (footer.classList.contains('active')) {
+    //         toggleButton.textContent = 'Hide List';
+    //     } else {
+    //         toggleButton.textContent = 'Hidden Objects';
+    //     }
+    // });
+    if (!toggleButton || !footer) return;
+
     toggleButton.addEventListener('click', () => {
         footer.classList.toggle('active');
-        if (footer.classList.contains('active')) {
-            toggleButton.textContent = 'Hide List';
-        } else {
-            toggleButton.textContent = 'Hidden Objects';
-        }
+        toggleButton.textContent = footer.classList.contains('active') ? 'Hide List' : 'Hidden Objects';
     });
 });
 
